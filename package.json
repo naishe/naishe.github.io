@@ -1,0 +1,15 @@
+{
+  "name": "frog",
+  "version": "1.0.0",
+  "description": "Frog's website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --single --browser Firefox"
+  },
+  "author": "Nishant Neeraj",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}
