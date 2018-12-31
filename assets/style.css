@@ -71,10 +71,10 @@ a:hover {
   min-height: 100vh;
   width: 66vw;
   margin: auto;
-  padding-top: calc(30vmax - 45vmin);
-  padding-bottom: calc(30vmax - 30vmin);
-  /* padding-top: calc(70vw-20vh);
-  padding-bottom: calc(70vw-20vh); */
+  padding-top: calc(30vw - 45vh);
+  padding-bottom: calc(30vw - 30vh);
+  /* padding-top: calc(30vmax - 45vmin);
+  padding-bottom: calc(30vmax - 30vmin); */
 }
 
 .hero-content {
