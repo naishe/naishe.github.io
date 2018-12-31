@@ -1,5 +1,13 @@
-/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700"); */
 @import url("https://fonts.googleapis.com/css?family=Sarabun:400,700");
+:root {
+  --highlight: red;
+  --bg: papayawhip;
+  --muted: #666666;
+  --color-on-bg: black;
+  --heart: crimson;
+  --star: gold;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,16 +29,52 @@ p {
   padding: 0;
 }
 
+small {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: var(--muted);
+}
+
+i {
+  font-size: calc(1.2rem + 1vw);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
 main {
-  background-color: papayawhip;
+  background-color: var(--bg);
+}
+
+a {
+  color: var(--color-on-bg);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--highlight);
 }
 
 .hero {
   min-height: 100vh;
   width: 66vw;
   margin: auto;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: calc(30vmax - 45vmin);
+  padding-bottom: calc(30vmax - 30vmin);
+  /* padding-top: calc(70vw-20vh);
+  padding-bottom: calc(70vw-20vh); */
 }
 
 .hero-content {
@@ -49,7 +93,7 @@ main {
 .hero-content > h1 {
   text-align: right;
   grid-column: 1 / 4;
-  border-top: 10px solid red;
+  border-top: 10px solid var(--highlight);
 }
 .hero-content div:nth-child(2) {
   writing-mode: vertical-lr;
@@ -57,7 +101,7 @@ main {
   grid-row: 2 / 5;
 
   justify-self: end;
-  color: red;
+  color: var(--highlight);
 }
 
 header .toc {
@@ -66,15 +110,16 @@ header .toc {
 }
 
 header .toc li {
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid var(--color-on-bg);
   font-weight: 700;
   font-size: calc(1.2rem + 0.2vw);
   margin-top: 0.5rem;
+  white-space: nowrap;
 }
 
 header .hotstuff {
-  border-top: 5px solid black;
-  border-bottom: 5px solid black;
+  border-top: 5px solid var(--color-on-bg);
+  border-bottom: 5px solid var(--color-on-bg);
   align-self: top;
   margin: 0;
   padding: self;
@@ -89,17 +134,17 @@ header .contact {
   grid-column: 3 / span 3;
   /* text-align: right; */
   align-self: end;
-  border-bottom: 10px solid red;
+  border-bottom: 10px solid var(--highlight);
   /* margin-left: 1rem; */
 }
 
 .red-black-split-container {
   background: linear-gradient(
     to top,
-    papayawhip 0%,
-    papayawhip 50%,
-    red 50%,
-    red 100%
+    var(--bg) 0%,
+    var(--bg) 50%,
+    var(--highlight) 50%,
+    var(--highlight) 100%
   );
   /* padding: 0.1rem; */
 }
@@ -107,10 +152,10 @@ header .contact {
 .red-black-split-container > * {
   background: linear-gradient(
     to top,
-    red 0%,
-    red 50%,
-    papayawhip 50%,
-    papayawhip 100%
+    var(--highlight) 0%,
+    var(--highlight) 50%,
+    var(--bg) 50%,
+    var(--bg) 100%
   );
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -121,36 +166,30 @@ header .contact {
 
 section {
   min-height: 100vh;
-  margin: auto;
-  background-color: papayawhip;
+  background-color: var(--bg);
   display: grid;
-  font-size: 2rem;
+  font-size: calc(1rem + 0.7vw);
   line-height: 2.5rem;
 }
 
 section > * {
   width: 90vw;
+  margin: auto;
 }
 section:nth-child(2n) {
+  background-image: url("/assets/bg.png");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url("/assets/bg.png");
   background-position: center center;
   box-shadow: inset 0 38px 38px -38px #000000, inset 0 -38px 38px -38px #000000;
-  background-color: red;
-  color: papayawhip;
+  background-color: var(--highlight);
+  color: var(--bg);
   /* filter: grayscale(100%); */
   text-shadow: 0px 2px 2px black;
 }
 
-section:nth-child(2n) p {
-  /* mix-blend-mode: difference; */
-  /* color: white; */
-}
-
 .about {
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
@@ -162,7 +201,7 @@ section:nth-child(2n) p {
 
 figure {
   margin: 1rem;
-  border: 4px solid papayawhip;
+  border: 4px solid var(--bg);
 }
 .dp {
   width: 300px;
@@ -178,4 +217,43 @@ figure {
   display: inline;
   margin: 0 auto;
   margin-left: -25%;
+}
+
+.tech {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  /* grid-gap: 1rem; */
+}
+
+.score img {
+  height: 120px;
+}
+
+.score div:first-child {
+  grid-row: 1 / 4;
+  justify-self: center;
+}
+
+.score div:nth-child(2) {
+  align-items: center;
+}
+
+.score > div {
+  align-self: center;
+}
+
+.hearts i {
+  margin-right: 0.2vw;
+  color: var(--heart);
+}
+
+.stars i {
+  margin-right: 0.2vw;
+  color: var(--star);
 }
