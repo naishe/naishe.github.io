@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Sarabun:400,700");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,700|Sarabun:400,700");
 :root {
   --highlight: red;
   --bg: papayawhip;
@@ -11,7 +11,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Sarabun", Arial, Helvetica, sans-serif;
+  /* font-family: "Sarabun", Arial, Helvetica, sans-serif; */
+  font-family: "EB Garamond", "Times New Roman", Times, serif;
 }
 
 ul {
@@ -68,6 +69,7 @@ a:hover {
 }
 
 .hero {
+  font-family: "EB Garamond", "Times New Roman", Times, serif;
   min-height: 100vh;
   width: 66vw;
   margin: auto;
@@ -164,12 +166,51 @@ header .contact {
   /* text-decoration: underline; */
 }
 
+.heading-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  /* color: #fff; */
+  font-family: "EB Garamond", serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 1.3em;
+}
+
+.heading em {
+  font-family: "EB Garamond", serif;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  font-style: normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+}
+.heading em::before,
+.heading em::after {
+  content: "§";
+  display: inline-block;
+  transform: rotate(90deg);
+  opacity: 0.8;
+  margin: 0 0.6em;
+  font-size: 0.5em;
+}
+
 section {
   min-height: 100vh;
   background-color: var(--bg);
-  display: grid;
+  /* display: grid; */
   font-size: calc(1rem + 0.7vw);
   line-height: 2.5rem;
+  padding-bottom: 2rem;
 }
 
 section > * {
@@ -177,8 +218,8 @@ section > * {
   margin: auto;
 }
 section:nth-child(2n) {
-  background-image: url("/assets/bg.png");
-  background-size: cover;
+  background-image: url("/assets/bg1.png");
+  /* background-size: cover; <-- works with the dragonfly*/
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
@@ -221,8 +262,8 @@ figure {
 
 .tech {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
 }
 
 .score {
@@ -256,4 +297,57 @@ figure {
 .stars i {
   margin-right: 0.2vw;
   color: var(--star);
+}
+
+.tech-mini {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.2rem;
+  margin-top: 2rem;
+  white-space: nowrap;
+}
+
+.mini-badge div:nth-child(1)::before {
+  content: "# ";
+}
+
+.mini-badge:hover div:nth-child(1)::before {
+  color: var(--heart);
+}
+
+.mini-badge div:nth-child(2) > * {
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+
+.clients a:hover {
+  color: var(--color-on-bg);
+  text-decoration: underline;
+}
+
+.client {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.client-pic {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: var(--bg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.client-pic img {
+  width: 200px;
+  margin: 1rem;
+}
+
+.client-tech-stack {
+  color: var(--color-on-bg);
 }
