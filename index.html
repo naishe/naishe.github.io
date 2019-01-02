@@ -51,7 +51,11 @@
               thin membranes
             </p>
           </div>
-          <div>Social Media Links</div>
+          <div>
+            <div class="social-media" id="social-media">
+              <!-- JS populates -->
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -71,33 +75,57 @@
             Chapter 3<em>The Patronage</em>Can You Hear Them Ka-ching?
           </h1>
         </div>
-        <div class="clients" id="clients">
-          <div class="client">
-            <div class="client-pic"><img src="/assets/c9.png" /></div>
-            <div class="client-detail">
-              <ul>
-                <li>
-                  <strong
-                    >Independent Contractor, March 2014 &mdash; Now</strong
-                  >
-                </li>
-                <li>Setup and manage AWS infrastruture</li>
-                <li>The DevOps guy and release engineer</li>
-                <li>Backend application development (Java)</li>
-                <li>
-                  Reliability manager for NoSQL databases: Cassandra, MongoDB,
-                  ElasticSearch
-                </li>
-              </ul>
+        <div class="clients" id="clients"><!-- JS fills it --></div>
+      </section>
+      <section>
+        <div class="heading-container">
+          <h1 class="heading">
+            Chapter 4<em>The Homebrew</em>Crafted with Love and Lethargy
+          </h1>
+        </div>
+        <div id="pet-projects"><!-- Js loads --></div>
+      </section>
+      <section>
+        <div class="fin">
+          <div>
+            <div class="heading-container">
+              <h1 class="heading">
+                <em>Fin.</em>Rage, Rage Against the Dying of the Light
+              </h1>
             </div>
           </div>
         </div>
       </section>
-      <section>something</section>
-      <section>something</section>
     </main>
   </body>
   <script>
+    var socialMedia = [
+      {
+        icon: "fa-linkedin",
+        text: "www.linkedin.com/in/naishe",
+        link: "https://www.linkedin.com/in/naishe/"
+      },
+      {
+        icon: "fa-stack-overflow",
+        text: "stackoverflow.com/users/298455/nishant",
+        link: "https://stackoverflow.com/users/298455/nishant"
+      },
+      {
+        icon: "fa-github",
+        text: "github.com/naishe",
+        link: "https://github.com/naishe"
+      },
+      {
+        icon: "fa-twitter",
+        text: "twitter.com/naishe",
+        link: "https://twitter.com/naishe"
+      },
+      {
+        icon: "fas fa-rss",
+        text: "blog.naishe.in",
+        link: "https://blog.naishe.in"
+      }
+    ];
     var techLoveData = [
       {
         title: "Java",
@@ -146,18 +174,6 @@
         icon: "/assets/docker.png",
         expertise: 3,
         love: 5
-      },
-      {
-        title: "Java",
-        icon: "/assets/java.png",
-        expertise: 5,
-        love: 3
-      },
-      {
-        title: "Java",
-        icon: "/assets/java.png",
-        expertise: 5,
-        love: 3
       }
     ].sort(() => Math.random() - 0.5); //shuffle!
 
@@ -250,6 +266,42 @@
         ]
       }
     ];
+
+    var petProjects = [
+      {
+        title: "My Pet Project",
+        desc:
+          "Eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years. Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes",
+        status:
+          "Currently, in ideation phase. No funding, no developer, no user. Helppp!!!"
+      },
+      {
+        title: "My Pet Project",
+        desc:
+          "Eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years. Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes",
+        status:
+          "Currently, in ideation phase. No funding, no developer, no user. Helppp!!!"
+      },
+      {
+        title: "My Pet Project",
+        desc:
+          "Eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years. Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes",
+        status:
+          "Currently, in ideation phase. No funding, no developer, no user. Helppp!!!"
+      }
+    ];
+
+    document.getElementById("social-media").innerHTML = socialMedia
+      .map(
+        s => `
+          <div class="social-media-item">
+            <div>
+              <a href=""> <i class="fab ${s.icon}"></i> </a>
+            </div>
+            <div><a href="${s.link}">${s.text}</a></div>
+          </div>`
+      )
+      .join("");
     // var techLove = ;
     var getStars = (stars, iconClass) =>
       [...Array(5).keys()]
@@ -315,6 +367,17 @@
               </ul>
             </div>
           </div>`
+      )
+      .join("");
+
+    document.getElementById("pet-projects").innerHTML = petProjects
+      .map(
+        p => `
+      <div class="pet-project">
+          <div><h3>${p.title}</h3></div>
+          <div>${p.desc}</div>
+          <div>STATUS: ${p.status}</div>
+        </div>`
       )
       .join("");
   </script>
