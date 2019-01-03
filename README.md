@@ -10,6 +10,8 @@ feel.
     # kick off the server at 7777 , expects Firefox browser installed
     npm start
 
-# NOTES
+# Inspirations
 
-1. Cardinal Sin: I have mixed Serif and San-Serif fonts!
+1. Jen Simmons @jensimmons
+2. Mandy Michael @Mandy_Kerr
+3. Bunch of people giving anonymous help tricks on CodePen and StackOverflow.
