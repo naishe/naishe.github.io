@@ -426,6 +426,7 @@ figure {
 
 .refresh > button {
   transition: transform 0.8s ease-in-out;
+  outline: none;
 }
 .refresh:hover > button {
   transform: rotate(360deg);
