@@ -68,6 +68,11 @@ a:hover {
   color: var(--highlight);
 }
 
+button {
+  border: 0;
+  padding: 0.1rem;
+  background-color: transparent;
+}
 .hero {
   font-family: "EB Garamond", "Times New Roman", Times, serif;
   min-height: 100vh;
@@ -171,7 +176,8 @@ header .contact {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: 2rem;
 }
 
@@ -403,4 +409,28 @@ figure {
   border-left: 1rem solid var(--highlight);
   padding-left: 1rem;
   margin-bottom: 1rem;
+}
+
+#outro {
+  cursor: help;
+}
+
+.refresh {
+  position: fixed;
+  width: 3rem;
+  font-size: 1rem;
+  top: 1rem;
+  right: 0px;
+  text-align: center;
+}
+
+.refresh > button {
+  transition: transform 0.8s ease-in-out;
+}
+.refresh:hover > button {
+  transform: rotate(360deg);
+}
+
+.refresh i {
+  opacity: 0.3;
 }

@@ -1,11 +1,20 @@
 // ------- DATA --------
 var openingLines = [
   "Nishant? Who the f*ck is",
-  "The curious case of",
-  "The name is neeraj ...",
+  "Surely, you are joking mr.",
   "Obviously, you're not a golfer",
   "People always ask me if I know"
 ];
+
+var closingLines = [
+  { quote: "After all, tomorrow is another day.", from: "Gone with the wind" },
+  { quote: "I am haunted by humans.", from: "The Book Thief" },
+  { quote: "2. Where is Plymouth Rock?", from: "Bill Watterson" },
+  { quote: "Reality continues to ruin my life.", from: "Bill Watterson" },
+  { quote: "Bangarang, Motherfucker!", from: "https://xkcd.com/813/" },
+  { quote: "Rage, Rage Against the Dying of the Light", from: "Dylan Thomas" }
+];
+
 var socialMedia = [
   {
     icon: "fa-linkedin",
@@ -211,11 +220,25 @@ var getStars = (stars, iconClass) =>
     .join("");
 
 var shuffleComparator = () => Math.random() - 0.5;
-var getRandom = length => Math.floor(Math.random() * length);
+var lastRandom = {};
+var getRandom = (key, length) => {
+  var lastRandomVal = lastRandom[key];
+  var newRandom;
+  do {
+    newRandom = Math.floor(Math.random() * length);
+  } while (newRandom === lastRandomVal);
+  lastRandom[key] = newRandom;
+  return newRandom;
+};
 
 var doTheMagic = () => {
   document.getElementById("intro").innerText =
-    openingLines[getRandom(openingLines.length)];
+    openingLines[getRandom("opening", openingLines.length)];
+
+  var outro = closingLines[getRandom("closing", closingLines.length)];
+  var outroContainer = document.getElementById("outro");
+  outroContainer.setAttribute("title", outro.from);
+  outroContainer.innerHTML = `<em>Fin.</em>${outro.quote}`;
 
   // 1. load social media icons
   document.getElementById("social-media").innerHTML = socialMedia
