@@ -259,7 +259,7 @@ var doTheMagic = () => {
     .sort(shuffleComparator)
     .map(
       t =>
-        `<div>
+        `<div class="score-wrapper">
           <div class="score">
             <div><img src="${t.icon}" /></div>
             <h3>${t.title}</h3>
