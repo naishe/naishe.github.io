@@ -23,7 +23,7 @@ var socialMedia = [
   },
   {
     icon: "fa-stack-overflow",
-    text: "stackoverflow.com/users/298455/nishant",
+    text: "stackoverflow.com/users/298455",
     link: "https://stackoverflow.com/users/298455/nishant"
   },
   {
@@ -301,7 +301,10 @@ var doTheMagic = () => {
         `<div class="client">
           <div class="client-pic"><img src="${c.img}" /></div>
           <div class="client-detail">
-            <h3><a href="${c.url}">${c.name}</a></h3>
+            <div class="client-title">
+                <img src="${c.img}" />
+                <h3><a href="${c.url}">${c.name}</a></h3>
+            </div>
             <ul>
               <li>
                 <strong>${c.role} | ${c.duration}</strong>
