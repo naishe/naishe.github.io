@@ -91,6 +91,12 @@ var techLoveData = [
     icon: "/assets/docker.png",
     expertise: 3,
     love: 5
+  },
+  {
+    title: "Cassandra",
+    icon: "/assets/cass.png",
+    expertise: 5,
+    love: 4
   }
 ];
 
@@ -231,6 +237,7 @@ var getRandom = (key, length) => {
   return newRandom;
 };
 
+var isFirstRun = true;
 var doTheMagic = () => {
   document.getElementById("intro").innerText =
     openingLines[getRandom("opening", openingLines.length)];
@@ -331,6 +338,22 @@ var doTheMagic = () => {
       </div>`
     )
     .join("");
+
+  // 6. set random favicons
+  var rand = getRandom("favicon", 17) + 1;
+  var h = document.getElementsByTagName("head")[0];
+  var faviconPath = `/assets/favicons/fav${rand}.ico`;
+
+  if (isFirstRun) {
+    h.insertAdjacentHTML(
+      "afterbegin",
+      `<link id="favicon" rel="shortcut icon" href=${faviconPath} />`
+    );
+  } else {
+    document.getElementById("favicon").setAttribute("href", faviconPath);
+  }
+
+  isFirstRun = false;
 };
 
 window.addEventListener("load", doTheMagic);
