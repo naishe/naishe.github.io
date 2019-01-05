@@ -341,10 +341,10 @@ var doTheMagic = () => {
 
   // 6. set random favicons
   var rand = getRandom("favicon", 17) + 1;
-  var h = document.getElementsByTagName("head")[0];
   var faviconPath = `/assets/favicons/fav${rand}.ico`;
 
   if (isFirstRun) {
+    var h = document.getElementsByTagName("head")[0];
     h.insertAdjacentHTML(
       "afterbegin",
       `<link id="favicon" rel="shortcut icon" href=${faviconPath} />`
