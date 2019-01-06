@@ -302,6 +302,12 @@ section:last-of-type {
   margin-top: 0.5rem;
 }
 
+.about a {
+  color: var(--bg);
+  /* font-weight: 100; */
+  /* text-decoration: underline; */
+}
+
 .social-media a {
   color: var(--bg);
   font-weight: 100;
