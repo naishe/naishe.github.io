@@ -150,6 +150,12 @@ header .hotstuff {
   grid-column: 4 / span 2;
   font-weight: 700;
   text-align: right;
+  text-transform: uppercase;
+}
+
+.hotstuff i {
+  color: red;
+  font-size: 1.2rem;
 }
 
 header .contact {
@@ -276,7 +282,7 @@ section:last-of-type {
 
 .about {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   grid-gap: 2rem;
 }
 
@@ -290,6 +296,10 @@ section:last-of-type {
 
 .about div:nth-child(1) {
   text-align: justify;
+}
+
+.about p {
+  margin-top: 0.5rem;
 }
 
 .social-media a {
@@ -604,4 +614,23 @@ figure {
 
 .refresh i {
   opacity: 0.3;
+}
+
+.footnote {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-shadow: none;
+  text-transform: uppercase;
+  margin-bottom: -2rem;
+}
+
+.footnote small {
+  color: var(--bg);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.footnote i {
+  font-size: 0.8rem;
 }

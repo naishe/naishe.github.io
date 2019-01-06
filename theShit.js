@@ -97,6 +97,12 @@ var techLoveData = [
     icon: "/assets/cass.png",
     expertise: 5,
     love: 4
+  },
+  {
+    title: "UI/UX",
+    icon: "/assets/ux.png",
+    expertise: 3,
+    love: 5
   }
 ];
 
@@ -192,18 +198,19 @@ var clients = [
 
 var petProjects = [
   {
-    title: "My Pet Project",
+    title: "Call Me Maybe",
     desc:
-      "Eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years. Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes",
+      "The idea is to provide restaurants a call bell similar to the one we have in the airplanes but better. Apart from getting rid of the " +
+      "hand raising, turning your neck and spotting a service person to passby, you can just press the orb on the table and it lights up. " +
+      "Not just a visual indicator. The table service person will be notified, the restaurant's main waiting will be appended; and the time " +
+      "it takes to serve you is observed.",
     status:
-      "Currently, in ideation phase. No funding, no developer, no user. Helppp!!!"
+      "Ideation completed. Tech is ready. Business plan ready. Funding and sales partner required."
   },
   {
-    title: "My Pet Project",
-    desc:
-      "Eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years. Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes",
-    status:
-      "Currently, in ideation phase. No funding, no developer, no user. Helppp!!!"
+    title: "Deskter",
+    desc: "Uplift in India, but you can choose fixed height legs too!",
+    status: "Business plan ready. Needs funding."
   },
   {
     title: "My Pet Project",
@@ -340,7 +347,7 @@ var doTheMagic = () => {
     .join("");
 
   // 6. set random favicons
-  var rand = getRandom("favicon", 17) + 1;
+  var rand = getRandom("favicon", 18) + 1;
   var faviconPath = `/assets/favicons/fav${rand}.ico`;
 
   if (isFirstRun) {
