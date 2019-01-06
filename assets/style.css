@@ -615,7 +615,7 @@ figure {
 .refresh i {
   opacity: 0.2;
 }
-.refresh i:active {
+.refresh button:active i {
   opacity: 0.3;
 }
 
