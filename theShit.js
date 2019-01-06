@@ -213,11 +213,11 @@ var petProjects = [
     status: "Business plan ready. Needs funding."
   },
   {
-    title: "My Pet Project",
+    title: "Pawr",
     desc:
-      "Eggs are laid by female animals of many different species, including birds, reptiles, amphibians, mammals, and fish, and have been eaten by humans for thousands of years. Bird and reptile eggs consist of a protective eggshell, albumen (egg white), and vitellus (egg yolk), contained within various thin membranes",
-    status:
-      "Currently, in ideation phase. No funding, no developer, no user. Helppp!!!"
+      "A free for all appointment management system for vets, that also allows you maintain profiles " +
+      "of your pet, help rescue animals, and connect animal lovers.",
+    status: "Ideation phase. Needs funding to keep it free and open."
   }
 ];
 
