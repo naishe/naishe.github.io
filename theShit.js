@@ -174,16 +174,16 @@ var clients = [
     ]
   },
   {
-    name: "InfiTech Solutions",
-    url: null,
-    img: "/assets/c9.png",
+    name: "My eMarks",
+    url: "http://www.myemarks.com/",
+    img: "/assets/packman.png",
     role: "Independent Contractor",
     duration: "Oct 2016 &mdash; Jan 2017",
     pointers: [
       "Setting up automation for book packaging system (BPS)",
       "Architecture and developmentment of BPS",
       "Barcode based scanning and alerting requires no manual navigation for input",
-      "UX (sound and color based) so that illiterate laborors can work without training"
+      "UX (sound and color based) so that untrained workers can use it with minimal instructions"
     ],
     techStack: [
       "Node.js",
