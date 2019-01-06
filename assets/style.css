@@ -613,6 +613,9 @@ figure {
 }
 
 .refresh i {
+  opacity: 0.2;
+}
+.refresh i:active {
   opacity: 0.3;
 }
 
