@@ -209,7 +209,8 @@ var petProjects = [
   },
   {
     title: "Deskter",
-    desc: "Uplift in India, but you can choose fixed height legs too!",
+    desc:
+      "Highly customizable automatic standing desks. Essentially, Uplift desks in India, but you can choose fixed height legs too!",
     status: "Business plan ready. Needs funding."
   },
   {
