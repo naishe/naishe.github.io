@@ -38,8 +38,8 @@ var socialMedia = [
   },
   {
     icon: "fas fa-rss",
-    text: "blog.naishe.in",
-    link: "https://blog.naishe.in"
+    text: "code.naishe.in",
+    link: "http://code.naishe.in"
   }
 ];
 
