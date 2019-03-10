@@ -8,7 +8,7 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   </head>
   <body>
     <main>
@@ -20,15 +20,25 @@
             <ul>
               <li>goto()</li>
               <li><a href="#me-me-me--me-too">10 ABOUT</a></li>
-              <li><a href="#it-is-the-question-that-drives-us">20 SKILLS</a></li>
+              <li>
+                <a href="#it-is-the-question-that-drives-us">20 SKILLS</a>
+              </li>
               <li><a href="#there-is-no-spoon">30 PROJECTS</a></li>
             </ul>
           </div>
-          <p class="hotstuff"><i class="fas fa-fire-alt"></i>&nbsp;Coming soon: new blog</p>
+          <p class="hotstuff">
+            <i class="fas fa-fire-alt"></i>&nbsp;Coming soon: new blog
+          </p>
           <!-- <p class="hotstuff"><a href="">Till the new </a></p> -->
           <div class="contact">
-            <p>Reach out via Twitter <a href="https://twitter.com/naishe">@naishe</a> for tech stuff.</p>
-            <p>Contact me for that side project you were mulling over. I freelance.</p>
+            <p>
+              Reach out via Twitter
+              <a href="https://twitter.com/naishe">@naishe</a> for tech stuff.
+            </p>
+            <p>
+              Contact me for that side project you were mulling over. I
+              freelance.
+            </p>
           </div>
         </div>
       </header>
@@ -41,28 +51,34 @@
         <div class="about">
           <div>
             <p>
-              Nishant is an independent software engineer, kinda entrepreneur-ish. 
-              Easily excited and will work as a freelancer for a cool idea over a high 
-              paying one.
+              Nishant is an independent software engineer, kinda
+              entrepreneur-ish. Easily excited and will work as a freelancer for
+              a cool idea over a high paying one.
             </p>
             <div class="dp-wrapper">
               <figure class="dp"><img src="./assets/p.jpg" /></figure>
             </div>
             <p>
-              He likes to write code and currenly ramping up on machine learning. 
-              Loves to build stuff, hack electronics and generally interested in 
-              science, tech, drawing, arts, crafts, pottery, and music.
+              He likes to write code and currenly ramping up on machine
+              learning. Loves to build stuff, hack electronics and generally
+              interested in science, tech, drawing, arts, crafts, pottery, and
+              music.
             </p>
             <p>
-              If you have an engaging project to implement in machine learning, 
-              web tech, big data and want a technical sounding board, he is all ears. 
-              Any suggestion or trick or how-to to improve guitar playing, digital painting 
-              is always welcomed. If you are doing something in CRISPR or longevity, he would be more 
-              than willing to share his time and skill with you.
+              If you have an engaging project to implement in machine learning,
+              web tech, big data and want a technical sounding board, he is all
+              ears. Any suggestion or trick or how-to to improve guitar playing,
+              digital painting is always welcomed. If you are doing something in
+              CRISPR or longevity, he would be more than willing to share his
+              time and skill with you.
             </p>
             <p>
-              He authored two editions of <a href="https://www.amazon.com/Mastering-Apache-Cassandra-Nishant-Neeraj/dp/1784392618">Mastering Apache Cassandra</a> book 
-              before getting bored with the authoring business.
+              He authored two editions of
+              <a
+                href="https://www.amazon.com/Mastering-Apache-Cassandra-Nishant-Neeraj/dp/1784392618"
+                >Mastering Apache Cassandra</a
+              >
+              book before getting bored with the authoring business.
             </p>
           </div>
           <div>
@@ -105,27 +121,38 @@
             <div class="heading-container">
               <h1 class="heading" id="outro"><!-- JS fills in here! --></h1>
             </div>
-          </div>              
+          </div>
         </div>
         <div class="footnote">
           <div>
             <span>
-              <small>Handcrafted with <i class="fas fa-heart"></i> | Code? <i class="fas fa-arrow-down"></i></small>
-              </span>
+              <small
+                >Handcrafted with <i class="fas fa-heart"></i> | Code?
+                <i class="fas fa-arrow-down"></i
+              ></small>
+            </span>
           </div>
           <div>
             <a href="https://github.com/naishe/frog">
-              <img 
-              src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-device-graphics-semantics.png" 
-              width="120" 
-              alt="Handcrafted with HTML5, CSS3 and ES6" 
-              title="Handcrafted with HTML5, CSS3 and ES6">
+              <img
+                src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-device-graphics-semantics.png"
+                width="120"
+                alt="Handcrafted with HTML5, CSS3 and ES6"
+                title="Handcrafted with HTML5, CSS3 and ES6"
+              />
             </a>
           </div>
         </div>
       </section>
     </main>
-    <div class="refresh"><button onclick="doTheMagic()"><i class="fa fa-sync"></i></div></button></div>
+    <div class="refresh">
+      <button class="rotate" onclick="doTheMagic()">
+        <i class="fa fa-sync"></i>
+      </button>
+      <button onclick="toggleTheme(true)">
+        <i class="fa fa-sun" id="mode"></i>
+      </button>
+    </div>
     <script type="text/javascript" src="theShit.js"></script>
   </body>
 </html>

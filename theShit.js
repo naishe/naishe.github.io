@@ -365,3 +365,84 @@ var doTheMagic = () => {
 };
 
 window.addEventListener("load", doTheMagic);
+
+var isDarkMode = true;
+var isModeForced = false;
+var setTheme = setDark => {
+  let root = document.documentElement;
+
+  if (setDark) {
+    root.style.setProperty("--odd-bg", "rgba(6, 30, 35, 1)");
+    root.style.setProperty("--odd-txt", "rgba(255, 255, 255, 0.7)");
+    root.style.setProperty("--odd-highlight", "rgba(183, 7, 0, 1)");
+    root.style.setProperty("--even-bg", "rgba(9, 67, 81, 1)");
+    root.style.setProperty("--even-txt", "rgba(255, 255, 255, 0.8)");
+    root.style.setProperty("--even-highlight", "rgba(255, 126, 7, 1)");
+    root.style.setProperty("--link", "rgba(255, 66, 6, 1)");
+    root.style.setProperty("--link-hover", "rgba(255, 126, 7, 1)");
+    root.style.setProperty("--img-border", "rgba(255, 126, 7, 1)");
+  } else {
+    root.style.setProperty("--odd-bg", "papayawhip");
+    root.style.setProperty("--odd-txt", "black");
+    root.style.setProperty("--odd-highlight", "red");
+    root.style.setProperty("--even-bg", "red");
+    root.style.setProperty("--even-txt", "papayawhip");
+    root.style.setProperty("--even-highlight", "black");
+    root.style.setProperty("--link", "black");
+    root.style.setProperty("--link-hover", "red");
+    root.style.setProperty("--img-border", "papayawhip");
+  }
+};
+
+var toggleTheme = (isButtonClick = false) => {
+  if (isButtonClick) {
+    isModeForced = true;
+  }
+
+  isDarkMode = !isDarkMode;
+  setTheme(isDarkMode);
+  var addClass = "fa-moon";
+  var removeClass = "fa-sun";
+  if (isDarkMode) {
+    addClass = "fa-sun";
+    removeClass = "fa-moon";
+  }
+  var modeNode = document.getElementById("mode").classList;
+  modeNode.add(addClass);
+  modeNode.remove(removeClass);
+};
+
+console.log(`
+Commenting out some cool code
+             /\\_/\\
+            ( o.o )
+             > ^ <
+NO SUPPORT FOR AMBIENCE LIGHT YET`);
+var setThemeBasedOnAmbientLight = () => {
+  // if ("ondevicelight" in window) {
+  //   window.addEventListener("devicelight", function(event) {
+  //     var darkButNoDarkMode = event.value <= 50 && !isDarkMode;
+  //     var brightButInDarkMode = event.value > 50 && isDarkMode;
+  //     if (darkButNoDarkMode || brightButInDarkMode) {
+  //       toggleTheme();
+  //     }
+  //   });
+  // } else {
+  var hr = new Date().getHours();
+  var isItDarkOutside = hr > 18 || hr < 7;
+  var darkOutSideButNoDarkTheme = isItDarkOutside && !isDarkMode;
+  var brightOutsideButInDarkMode = !isItDarkOutside && isDarkMode;
+
+  if (darkOutSideButNoDarkTheme || brightOutsideButInDarkMode) {
+    toggleTheme();
+  }
+  // }
+};
+
+window.addEventListener("load", setThemeBasedOnAmbientLight);
+
+setInterval(() => {
+  if (!isModeForced) {
+    setThemeBasedOnAmbientLight();
+  }
+}, 5000);
