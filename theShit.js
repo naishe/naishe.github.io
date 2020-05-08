@@ -1,9 +1,9 @@
 // ------- DATA --------
 var openingLines = [
-  "Nishant? Who the f*ck is",
+  "Nishant? Who the fuck is",
   "Surely, you are joking mr.",
   "Obviously, you're not a golfer",
-  "People always ask me if I know"
+  "People always ask me if I know",
 ];
 
 var closingLines = [
@@ -12,35 +12,41 @@ var closingLines = [
   { quote: "2. Where is Plymouth Rock?", from: "Bill Watterson" },
   { quote: "Reality continues to ruin my life.", from: "Bill Watterson" },
   { quote: "Bangarang, Motherfucker!", from: "https://xkcd.com/813/" },
-  { quote: "Rage, Rage Against the Dying of the Light", from: "Dylan Thomas" }
+  { quote: "Rage, Rage Against the Dying of the Light", from: "Dylan Thomas" },
+  {
+    quote: "The past is a foreign country; they do things differently there",
+    from: "The Go-Between",
+  },
+  { quote: "All children, except one, grow up.", from: "Peter Pan" },
+  { quote: "All this happened. More or less.", from: "Slaughterhouse Five" },
 ];
 
 var socialMedia = [
   {
     icon: "fa-linkedin",
     text: "www.linkedin.com/in/naishe",
-    link: "https://www.linkedin.com/in/naishe/"
+    link: "https://www.linkedin.com/in/naishe/",
   },
   {
     icon: "fa-stack-overflow",
     text: "stackoverflow.com/users/298455",
-    link: "https://stackoverflow.com/users/298455/nishant"
+    link: "https://stackoverflow.com/users/298455/nishant",
   },
   {
     icon: "fa-github",
     text: "github.com/naishe",
-    link: "https://github.com/naishe"
+    link: "https://github.com/naishe",
   },
   {
     icon: "fa-twitter",
     text: "twitter.com/naishe",
-    link: "https://twitter.com/naishe"
+    link: "https://twitter.com/naishe",
   },
   {
     icon: "fas fa-rss",
     text: "code.naishe.in",
-    link: "http://code.naishe.in"
-  }
+    link: "http://code.naishe.in",
+  },
 ];
 
 var techLoveData = [
@@ -48,62 +54,62 @@ var techLoveData = [
     title: "Java",
     icon: "/assets/java.png",
     expertise: 5,
-    love: 3
+    love: 3,
   },
   {
     title: "Node.js",
     icon: "/assets/nodejs.png",
     expertise: 5,
-    love: 5
+    love: 5,
   },
   {
     title: "MongoDB",
     icon: "/assets/mongo.png",
     expertise: 5,
-    love: 5
+    love: 5,
   },
   {
     title: "React",
     icon: "/assets/react.png",
     expertise: 5,
-    love: 5
+    love: 5,
   },
   {
     title: "AWS",
     icon: "/assets/aws.png",
     expertise: 5,
-    love: 5
+    love: 5,
   },
   {
     title: "GraphQL",
     icon: "/assets/graphql.png",
     expertise: 4,
-    love: 5
+    love: 5,
   },
   {
     title: "ML",
     icon: "/assets/ml.png",
     expertise: 1,
-    love: 5
+    love: 5,
   },
   {
     title: "Docker",
     icon: "/assets/docker.png",
     expertise: 3,
-    love: 5
+    love: 5,
   },
   {
     title: "Cassandra",
     icon: "/assets/cass.png",
     expertise: 5,
-    love: 4
+    love: 4,
   },
   {
     title: "UI/UX",
     icon: "/assets/ux.png",
     expertise: 3,
-    love: 5
-  }
+    love: 5,
+  },
 ];
 
 var techLoveMiniData = [
@@ -124,7 +130,7 @@ var techLoveMiniData = [
   { title: "Kubernetes", expertise: 2 },
   { title: "SciKit Learn", expertise: 3 },
   { title: "Internet of Things", expertise: 3 },
-  { title: "TensorFlow", expertise: 1 }
+  { title: "TensorFlow", expertise: 1 },
 ];
 
 var clients = [
@@ -133,12 +139,12 @@ var clients = [
     url: "https://www.wealthengine.com/",
     img: "/assets/we.png",
     role: "Independent Contractor",
-    duration: "March 2014 &mdash; Now",
+    duration: "March 2014 &mdash; Feb 2019",
     pointers: [
       "Setup and manage AWS infrastructure",
       "The DevOps Guy, and release engineer",
       "Backend application development (Java)",
-      "Reliability engineer for NoSQL databases: Cassandra, MongoDB, and ElasticSearch"
+      "Reliability engineer for NoSQL databases: Cassandra, MongoDB, and ElasticSearch",
     ],
     techStack: [
       "AWS",
@@ -146,21 +152,21 @@ var clients = [
       "MongoDB",
       "ElasticSearch",
       "Nagios",
-      "Java"
-    ]
+      "Java",
+    ],
   },
   {
     name: "Cloudnine Hospitals",
     url: "https://www.cloudninecare.com/",
     img: "/assets/c9.png",
     role: "Independent Contractor",
-    duration: "Oct 2017 &mdash; Feb 2018, Sep 2018 &mdash; Now",
+    duration: "Oct 2017 &mdash; Feb 2018, Sep 2018 &mdash; Dec 2019",
     pointers: [
       "React Native App for existing APIs",
       "Hiring and setting up engineering team",
       "AWS infrastructure setup",
       "Architecture and developmentment of appointment booking system (AMS)",
-      "Design and development of UIs to manage and administer AMS"
+      "Design and development of UIs to manage and administer AMS",
     ],
     techStack: [
       "Node.js",
@@ -170,8 +176,8 @@ var clients = [
       "EKS",
       "CI/CD",
       "ReactJS",
-      "React Native"
-    ]
+      "React Native",
+    ],
   },
   {
     name: "My eMarks",
@@ -183,7 +189,7 @@ var clients = [
       "Setting up automation for book packaging system (BPS)",
       "Architecture and developmentment of BPS",
       "Barcode based scanning and alerting requires no manual navigation for input",
-      "UX (sound and color based) so that untrained workers can use it with minimal instructions"
+      "UX (sound and color based) so that untrained workers can use it with minimal instructions",
     ],
     techStack: [
       "Node.js",
@@ -191,9 +197,9 @@ var clients = [
       "ReactJS",
       "Electron",
       "React Native",
-      "MongoDB"
-    ]
-  }
+      "MongoDB",
+    ],
+  },
 ];
 
 var petProjects = [
@@ -205,28 +211,28 @@ var petProjects = [
       "Not just a visual indicator. The table service person will be notified, the restaurant's main waiting will be appended; and the time " +
       "it takes to serve you is observed.",
     status:
-      "Ideation completed. Tech is ready. Business plan ready. Funding and sales partner required."
+      "Ideation completed. Tech is ready. Business plan ready. Funding and sales partner required.",
   },
   {
     title: "Deskter",
     desc:
       "Highly customizable automatic standing desks. Essentially, Uplift desks in India, but you can choose fixed height legs too!",
-    status: "Business plan ready. Needs funding."
+    status: "Business plan ready. Needs funding.",
   },
   {
     title: "Pawr",
     desc:
       "A free for all appointment management system for vets, that also allows you maintain profiles " +
       "of your pet, help rescue animals, and connect animal lovers.",
-    status: "Ideation phase. Needs funding to keep it free and open."
-  }
+    status: "Ideation phase. Needs funding to keep it free and open.",
+  },
 ];
 
 // --- render the data ---
 // Helper function that generate on and off stars and hearts
 var getStars = (stars, iconClass) =>
   [...Array(5).keys()]
-    .map(i =>
+    .map((i) =>
       i < stars
         ? `<i class="fas ${iconClass}"></i>`
         : `<i class="far ${iconClass}"></i>`
@@ -259,7 +265,7 @@ var doTheMagic = () => {
   document.getElementById("social-media").innerHTML = socialMedia
     .sort(shuffleComparator)
     .map(
-      s => `
+      (s) => `
         <div class="social-media-item">
           <div>
             <a href=""> <i class="fab ${s.icon}"></i> </a>
@@ -273,7 +279,7 @@ var doTheMagic = () => {
   document.getElementById("techlove").innerHTML = techLoveData
     .sort(shuffleComparator)
     .map(
-      t =>
+      (t) =>
         `<div class="score-wrapper">
           <div class="score">
             <div><img src="${t.icon}" /></div>
@@ -301,7 +307,7 @@ var doTheMagic = () => {
   document.getElementById("techlove-mini").innerHTML = techLoveMiniData
     .sort(shuffleComparator)
     .map(
-      t =>
+      (t) =>
         ` <div class="mini-badge">
             <div>${t.title}</div>
             <div>${getStars(t.expertise, "fa-star")}</div>
@@ -312,7 +318,7 @@ var doTheMagic = () => {
   // 4. render clientele
   document.getElementById("clients").innerHTML = clients
     .map(
-      c =>
+      (c) =>
         `<div class="client">
           <div class="client-pic"><img src="${c.img}" /></div>
           <div class="client-detail">
@@ -324,7 +330,7 @@ var doTheMagic = () => {
               <li>
                 <strong>${c.role} | ${c.duration}</strong>
               </li>
-              ${c.pointers.map(p => `<li>${p}</li>`).join("")}
+              ${c.pointers.map((p) => `<li>${p}</li>`).join("")}
               <li>
                 <span class="client-tech-stack">Tech Stack:&nbsp;</span>
                 ${c.techStack.join(" | ")}
@@ -338,7 +344,7 @@ var doTheMagic = () => {
   // 5. Render pet projects
   document.getElementById("pet-projects").innerHTML = petProjects
     .map(
-      p => `
+      (p) => `
     <div class="pet-project">
         <div><h3>${p.title}</h3></div>
         <div>${p.desc}</div>
@@ -368,7 +374,7 @@ window.addEventListener("load", doTheMagic);
 
 var isDarkMode = true;
 var isModeForced = false;
-var setTheme = setDark => {
+var setTheme = (setDark) => {
   let root = document.documentElement;
 
   if (setDark) {
