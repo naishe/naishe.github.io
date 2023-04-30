@@ -10,6 +10,6 @@
   "author": "Nishant Neeraj",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.29.1"
   }
 }
