@@ -127,11 +127,33 @@ var techLoveMiniData = [
 
 var clients = [
   {
+    name: "VAPA",
+    url: "https://vapa.ai",
+    img: "/assets/vapa.svg",
+    role: "Tech Architect",
+    duration: "Aug 2022 &mdash; Now",
+    pointers: [
+      "Taking a mostly offline organization to fully online",
+      "Architecting, design decisions, and tech selection",
+      "The Code Monkey",
+      "Lean Startup to the core",
+    ],
+    techStack: [
+      "NextJS",
+      "Terraform",
+      "PlanetScale",
+      "Google Cloud",
+      "NodeJS",
+      "TypeScript",
+      "CI/CD",
+    ],
+  },
+  {
     name: "ThatMate",
     url: "https://thatmate.com/",
     img: "/assets/thatmate.png",
     role: "CTO / Tech Architect",
-    duration: "Sep 2019 &mdash; Now",
+    duration: "Sep 2019 &mdash; Aug 2023",
     pointers: [
       "Taking a mostly offline organization to fully online",
       "Architecting, design decisions, and tech selection",
