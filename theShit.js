@@ -44,8 +44,8 @@ var socialMedia = [
   },
   {
     icon: "fa-medium",
-    text: "medium.com/@nishant.neeraj",
-    link: "https://medium.com/@nishant.neeraj",
+    text: "naishe.medium.com",
+    link: "https://naishe.medium.com/",
   },
 ];
 
@@ -133,10 +133,10 @@ var clients = [
     role: "Tech Architect",
     duration: "Aug 2022 &mdash; Now",
     pointers: [
-      "Taking a mostly offline organization to fully online",
+      "Rebuilding the entire platform",
       "Architecting, design decisions, and tech selection",
-      "The Code Monkey",
-      "Lean Startup to the core",
+      "Big data, analytics, async processing, ad-tech",
+      "Extremely Lean Startup",
     ],
     techStack: [
       "NextJS",
